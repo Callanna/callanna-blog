@@ -10,7 +10,7 @@ const router = Router();
 // 判断账户是否存在（是否已初始化）
 router.get('/exists', async (_req, res) => {
   let resp: IResp;
-  try { 
+  try {
     const data = await proxy.existsAccount();
     resp = {
       code: 1,

@@ -1,7 +1,7 @@
 import DB from '../db';
 const { Auth } = DB.Models;
 
-export async function existsAccount () { 
+export async function existsAccount () {
   const exists = await Auth.exists({});
   return {
     exists
@@ -25,10 +25,10 @@ export async function newAccount (params) {
   };
 }
 
-export async function findAccount (params) { 
+export async function findAccount (params) {
   const account = await Auth.findOne({
     password: params.password
-  }); 
+  });
   return {
     account
   };
